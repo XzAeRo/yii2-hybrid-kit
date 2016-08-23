@@ -1,6 +1,6 @@
 {
-  "name": "trntv/yii2-starter-kit",
-  "description": "Yii2 Starter Kit Application Template",
+  "name": "trntv/yii2-hybrid-kit",
+  "description": "Yii2 Hybrid Kit Application Template",
   "keywords": [
     "yii2",
     "framework",
@@ -20,8 +20,8 @@
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/trntv/yii2-starter-kit/issues?state=open",
-    "source": "https://github.com/trntv/yii2-starter-kit"
+    "issues": "https://github.com/trntv/yii2-hybrid-kit/issues?state=open",
+    "source": "https://github.com/trntv/yii2-hybrid-kit"
   },
   "require": {
     "php": ">=5.5.0",

@@ -84,14 +84,14 @@ class m150725_192740_seed_data extends Migration
                     'template'=>'<a href="{url}" class="btn btn-lg btn-success">{label}</a>'
                 ],
                 [
-                    'label'=>'Yii2 Starter Kit on GitHub',
-                    'url'=>'https://github.com/trntv/yii2-starter-kit',
+                    'label'=>'Yii2 Hybrid Kit on GitHub',
+                    'url'=>'https://github.com/trntv/yii2-hybrid-kit',
                     'options'=>['tag'=>'span'],
                     'template'=>'<a href="{url}" class="btn btn-lg btn-primary">{label}</a>'
                 ],
                 [
                     'label'=>'Find a bug?',
-                    'url'=>'https://github.com/trntv/yii2-starter-kit/issues',
+                    'url'=>'https://github.com/trntv/yii2-hybrid-kit/issues',
                     'options'=>['tag'=>'span'],
                     'template'=>'<a href="{url}" class="btn btn-lg btn-danger">{label}</a>'
                 ]
@@ -103,7 +103,7 @@ class m150725_192740_seed_data extends Migration
         $this->insert('{{%widget_text}}', [
             'key'=>'backend_welcome',
             'title'=>'Welcome to backend',
-            'body'=>'<p>Welcome to Yii2 Starter Kit Dashboard</p>',
+            'body'=>'<p>Welcome to Yii2 Hybrid Kit Dashboard</p>',
             'status'=>1,
             'created_at'=> time(),
             'updated_at'=> time(),
@@ -137,7 +137,7 @@ class m150725_192740_seed_data extends Migration
         $this->insert('{{%widget_carousel_item}}', [
             'carousel_id'=>1,
             'base_url' => Yii::getAlias('@frontendUrl'),
-            'path'=>'img/yii2-starter-kit.gif',
+            'path'=>'img/yii2-hybrid-kit.gif',
             'type'=>'image/gif',
             'url'=>'/',
             'status'=>1
