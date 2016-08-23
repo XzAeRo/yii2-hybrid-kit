@@ -85,13 +85,13 @@ class m150725_192740_seed_data extends Migration
                 ],
                 [
                     'label'=>'Yii2 Hybrid Kit on GitHub',
-                    'url'=>'https://github.com/trntv/yii2-hybrid-kit',
+                    'url'=>'https://github.com/XzAeRo/yii2-hybrid-kit',
                     'options'=>['tag'=>'span'],
                     'template'=>'<a href="{url}" class="btn btn-lg btn-primary">{label}</a>'
                 ],
                 [
                     'label'=>'Find a bug?',
-                    'url'=>'https://github.com/trntv/yii2-hybrid-kit/issues',
+                    'url'=>'https://github.com/XzAeRo/yii2-hybrid-kit/issues',
                     'options'=>['tag'=>'span'],
                     'template'=>'<a href="{url}" class="btn btn-lg btn-danger">{label}</a>'
                 ]
@@ -137,7 +137,7 @@ class m150725_192740_seed_data extends Migration
         $this->insert('{{%widget_carousel_item}}', [
             'carousel_id'=>1,
             'base_url' => Yii::getAlias('@frontendUrl'),
-            'path'=>'img/yii2-hybrid-kit.gif',
+            'path'=>'img/yii2-hybrid-kit.png',
             'type'=>'image/gif',
             'url'=>'/',
             'status'=>1
