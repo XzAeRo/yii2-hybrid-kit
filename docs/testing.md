@@ -2,7 +2,7 @@
 
 To run tests:
 
-- Create `yii2-starter-kit-test` database
+- Create `yii2-hybrid-kit-test` database
 - Adjust `.env` file to set `TEST_DB_DSN`, `TEST_DB_USER` and `TEST_DB_PASSWORD` params
 - Setup application
 ```

@@ -1,4 +1,4 @@
-Yii Starter Kit Change Log
+Yii Hybrid Kit Change Log
 ==========================
 
 dev-master

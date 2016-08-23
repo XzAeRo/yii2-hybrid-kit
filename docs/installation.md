@@ -24,11 +24,11 @@ composer global require "fxp/composer-asset-plugin"
 
 ### Get source code
 #### Download sources
-https://github.com/trntv/yii2-starter-kit/archive/master.zip
+https://github.com/trntv/yii2-hybrid-kit/archive/master.zip
 
 #### Or clone repository manually
 ```
-git clone https://github.com/trntv/yii2-starter-kit.git
+git clone https://github.com/trntv/yii2-hybrid-kit.git
 ```
 #### Install composer dependencies
 ```
@@ -39,7 +39,7 @@ composer install
 You can install this application template with `composer` using the following command:
 
 ```
-composer create-project --prefer-dist --stability=dev trntv/yii2-starter-kit
+composer create-project --prefer-dist --stability=dev trntv/yii2-hybrid-kit
 ```
 
 ## Manual installation
@@ -63,16 +63,16 @@ Required PHP extensions:
 	```
 	- Set DB configuration
 	```
-	DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-starter-kit
+	DB_DSN           = mysql:host=127.0.0.1;port=3306;dbname=yii2-hybrid-kit
 	DB_USERNAME      = user
 	DB_PASSWORD      = password
 	```
 
 	- Set application canonical urls
 	```
-	FRONTEND_URL    = http://yii2-starter-kit.dev
-	BACKEND_URL     = http://backend.yii2-starter-kit.dev
-	STORAGE_URL     = http://storage.yii2-starter-kit.dev
+	FRONTEND_URL    = http://yii2-hybrid-kit.dev
+	BACKEND_URL     = http://backend.yii2-hybrid-kit.dev
+	STORAGE_URL     = http://storage.yii2-hybrid-kit.dev
 	```
 
 3. Run in command line
@@ -83,9 +83,9 @@ php console/yii app/setup
 ### Configure your web server
 Copy `vhost.conf.dist` to `vhost.conf`, change it with your local settings and copy (symlink) it to nginx `sites-enabled` directory.
 Or configure your web server with three different web roots:
-- yii2-starter-kit.dev => /path/to/yii2-starter-kit/frontend/web
-- backend.yii2-starter-kit.dev => /path/to/yii2-starter-kit/backend/web
-- storage.yii2-starter-kit.dev => /path/to/yii2-starter-kit/storage/web
+- yii2-hybrid-kit.dev => /path/to/yii2-hybrid-kit/frontend/web
+- backend.yii2-hybrid-kit.dev => /path/to/yii2-hybrid-kit/backend/web
+- storage.yii2-hybrid-kit.dev => /path/to/yii2-hybrid-kit/storage/web
 
 ### Single domain installation
 #### Setup application
@@ -121,11 +121,11 @@ Adjust settings in `frontend/config/web.php` file
 This is an example single domain config for apache
 ```
 <VirtualHost *:80>
-    ServerName yii2-starter-kit.dev
+    ServerName yii2-hybrid-kit.dev
 
     RewriteEngine on
     # the main rewrite rule for the frontend application
-    RewriteCond %{HTTP_HOST} ^yii2-starter-kit.dev$ [NC] 
+    RewriteCond %{HTTP_HOST} ^yii2-hybrid-kit.dev$ [NC] 
     RewriteCond %{REQUEST_URI} !^/(backend/web|admin|storage/web)
     RewriteRule !^/frontend/web /frontend/web%{REQUEST_URI} [L]
     # redirect to the page without a trailing slash (uncomment if necessary)
@@ -138,13 +138,13 @@ This is an example single domain config for apache
     RewriteCond %{REQUEST_URI} ^/admin
     RewriteRule ^/admin(.*) /backend/web$1 [L]
 
-    DocumentRoot /your/path/to/yii2-starter-kit
+    DocumentRoot /your/path/to/yii2-hybrid-kit
     <Directory />
         Options FollowSymLinks
         AllowOverride None
         AddDefaultCharset utf-8
     </Directory>
-    <Directory "/your/path/to/yii2-starter-kit/frontend/web">
+    <Directory "/your/path/to/yii2-hybrid-kit/frontend/web">
         RewriteEngine on
         # if a directory or a file exists, use the request directly
         RewriteCond %{REQUEST_FILENAME} !-f
@@ -154,7 +154,7 @@ This is an example single domain config for apache
 
         Require all granted
     </Directory>
-    <Directory "/your/path/to/yii2-starter-kit/backend/web">
+    <Directory "/your/path/to/yii2-hybrid-kit/backend/web">
         RewriteEngine on
         # if a directory or a file exists, use the request directly
         RewriteCond %{REQUEST_FILENAME} !-f
@@ -164,7 +164,7 @@ This is an example single domain config for apache
 
         Require all granted
     </Directory>
-    <Directory "/your/path/to/yii2-starter-kit/storage/web">
+    <Directory "/your/path/to/yii2-hybrid-kit/storage/web">
         RewriteEngine on
         # if a directory or a file exists, use the request directly
         RewriteCond %{REQUEST_FILENAME} !-f
@@ -190,7 +190,7 @@ server {
 	root /app;
 	index index.php index.html;
 
-	server_name yii2-starter-kit.dev;
+	server_name yii2-hybrid-kit.dev;
 
 	charset utf-8;
 
@@ -247,7 +247,7 @@ upstream php-fpm {
  - Install it
  - If you are not working on Linux (but OSX, Windows) instead, you will need a VM to run docker. 
  If you don't intend to use Docker containers for application deployment, it might be better to 
- use the Vagrant way to install `yii2-starter-kit`.
+ use the Vagrant way to install `yii2-hybrid-kit`.
 
 ### Installation
 1. Copy `.env.docker.dist` to `.env` in the project root
@@ -260,7 +260,7 @@ upstream php-fpm {
 5. Run `docker-compose up -d`
 6. Run locally `composer install --prefer-dist --optimize-autoloader`
 7. Setup application with `docker-compose run cli console/yii app/setup`
-8. That's all - your application is accessible on http://yii2-starter-kit.dev:8000
+8. That's all - your application is accessible on http://yii2-hybrid-kit.dev:8000
 
 ### Docker FAQ
 1. How do i run yii console command?
@@ -285,7 +285,7 @@ If you want, you can use bundled Vagrant instead of installing app to your local
 vagrant plugin install vagrant-hostmanager
 vagrant up
 ```
-That`s all. After provision application will be accessible on http://yii2-starter-kit.dev
+That`s all. After provision application will be accessible on http://yii2-hybrid-kit.dev
 
 ## Demo data
 ### Demo Users
