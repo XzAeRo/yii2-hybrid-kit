@@ -8,7 +8,7 @@
             alt="Dependency Status" />
     </a>
     <a href="https://travis-ci.org/XzAeRo/yii2-hybrid-kit" target="_BLANK">
-        <img src="https://img.shields.io/travis/XzAeRo/yii2-hybrid-kit/master.svg&style=flat-square"
+        <img src="https://img.shields.io/travis/XzAeRo/yii2-hybrid-kit/master.svg?style=flat-square"
             alt="Build Status" />
     </a>
     <a href="https://github.com/trntv/yii2-starter-kit" target="_BLANK">
