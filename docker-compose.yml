@@ -15,6 +15,7 @@ fpm:
   links:
     - db
     - mailcatcher
+    - mongo
   environment:
     XDEBUG_CONFIG: "idekey=PHPSTORM remote_enable=On remote_connect_back=On"
 
@@ -57,3 +58,13 @@ db:
     MYSQL_DATABASE: yii2-hybrid-kit
     MYSQL_USER: yhk_dbu
     MYSQL_PASSWORD: yhk_pass
+
+mongo:
+  image: mongo:latest
+  ports:
+    - "27017:27017"
+
+#mongo-seed:
+#  build: docker/mongo
+#  links:
+#    - mongo

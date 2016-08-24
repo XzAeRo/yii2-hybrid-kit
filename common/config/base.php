@@ -64,6 +64,11 @@ $config = [
             'enableSchemaCache' => YII_ENV_PROD,
         ],
 
+        'mongodb' => [
+            'class' => '\yii\mongodb\Connection',
+            'dsn' => env('MONGO_DSN'),
+        ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -171,7 +176,12 @@ if (YII_ENV_PROD) {
 if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
-        'class'=>'yii\gii\Module'
+        'class'=>'yii\gii\Module',
+        'generators' => [
+            'mongoDbModel' => [
+                'class' => 'yii\mongodb\gii\model\Generator'
+            ]
+        ],
     ];
 
     $config['components']['cache'] = [
