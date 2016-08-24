@@ -7,17 +7,16 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng12-dev \
         libicu-dev \
+        libssl-dev \
                 --no-install-recommends
 
 RUN docker-php-ext-install mcrypt intl mbstring pdo_mysql exif \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd
 
+RUN pecl install mongodb-1.1.8 \
+    && docker-php-ext-enable mongodb
 
-RUN pecl install -o -f xdebug \
-    && rm -rf /tmp/pear
-
-COPY ./php.ini /usr/local/etc/php/
 COPY ./www.conf /usr/local/etc/php/
 
 RUN apt-get purge -y g++ \
