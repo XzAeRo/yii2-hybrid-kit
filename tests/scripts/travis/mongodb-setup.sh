@@ -7,17 +7,9 @@
 echo "MongoDB Server version:"
 mongod --version
 
-mongo yii2test --eval 'db.createUser({user: "travis", pwd: "test", roles: ["readWrite", "dbAdmin"]});'
-
 # PHP Extension :
-
-if (php --version | grep -i HipHop > /dev/null); then
-  echo "skip PHP extension installation on HHVM"
-else
-  pecl install -f mongodb
+if (php --version | grep -i 7.0 > /dev/null); then
   echo "extension = mongodb.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  echo "MongoDB PHP Extension version:"
-  php -i |grep mongodb -4 |grep -2 version
+else
+  echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 fi
-
-cat /etc/mongodb.conf
