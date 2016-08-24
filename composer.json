@@ -1,5 +1,5 @@
 {
-  "name": "trntv/yii2-hybrid-kit",
+  "name": "XzAeRo/yii2-hybrid-kit",
   "description": "Yii2 Hybrid Kit Application Template",
   "keywords": [
     "yii2",
@@ -7,21 +7,25 @@
     "start",
     "cms",
     "application template",
-    "yii2 advanced"
+    "yii2 advanced",
+    "yii2 hybrid",
+    "mongo",
+    "mongodb",
+    "big data"
   ],
   "authors": [
     {
-      "name": "Eugene Terentev",
-      "email": "eugene@terentev.net",
-      "homepage": "http://terentev.net",
+      "name": "Victor Gonzalez",
+      "email": "victor.gonzalezro@gmail.com",
+      "homepage": "http://vgr.cl",
       "role": "Developer"
     }
   ],
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/trntv/yii2-hybrid-kit/issues?state=open",
-    "source": "https://github.com/trntv/yii2-hybrid-kit"
+    "issues": "https://github.com/XzAeRo/yii2-hybrid-kit/issues?state=open",
+    "source": "https://github.com/XzAeRo/yii2-hybrid-kit"
   },
   "require": {
     "php": ">=5.5.0",
