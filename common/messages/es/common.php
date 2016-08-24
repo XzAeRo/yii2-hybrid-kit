@@ -49,7 +49,7 @@ return [
     'ID' => 'ID',
     'Image' => 'Imagen',
     'Key' => 'Clave',
-    'Last login' => 'ültimo Login',
+    'Last login' => 'Último Login',
     'Lastname' => 'Apellido',
     'Locale' => 'Pais',
     'Middlename' => 'Segundo Nombre',
