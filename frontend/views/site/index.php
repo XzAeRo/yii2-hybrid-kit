@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 $this->title = Yii::$app->name;
+$this->params['no-header'] = true;
 ?>
 <div class="site-index">
 
