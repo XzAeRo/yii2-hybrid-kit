@@ -15,7 +15,7 @@ use yii\helpers\Html;
     <?php $this->head() ?>
     <?php echo Html::csrfMetaTags() ?>
 </head>
-<body>
+<body class="layout-top-nav skin-green-light">
 <?php $this->beginBody() ?>
     <?php echo $content ?>
 <?php $this->endBody() ?>
