@@ -64,11 +64,15 @@ $config = [
 if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class'=>'yii\gii\Module',
-        'generators'=>[
-            'crud'=>[
+        'generators' => [
+            'crud' => [
                 'class'=>'yii\gii\generators\crud\Generator',
-                'messageCategory'=>'frontend'
-            ]
+                'templates'=>[
+                    'yii2-hybrid-kit' => Yii::getAlias('@frontend/views/_gii/templates')
+                ],
+                'template' => 'yii2-hybrid-kit',
+                'messageCategory' => 'frontend'
+            ],
         ]
     ];
 }
