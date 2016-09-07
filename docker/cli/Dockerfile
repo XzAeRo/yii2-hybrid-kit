@@ -6,7 +6,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install \
         openssl \
         curl \
         wget \
-        libicu-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
@@ -21,8 +20,7 @@ RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash -
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get --yes install \
         nodejs \
-        build-essential \
-        default-jre
+        build-essential
 
 RUN curl -sL https://www.npmjs.org/install.sh | bash -
 

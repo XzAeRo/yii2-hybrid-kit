@@ -5,9 +5,7 @@ data:
   entrypoint: tail -f /dev/null
 
 fpm:
-  build: docker/php
-  volumes_from:
-    - data
+  build: docker/fpm
   volumes_from:
     - data
   expose:
@@ -20,14 +18,13 @@ fpm:
     XDEBUG_CONFIG: "idekey=PHPSTORM remote_enable=On remote_connect_back=On"
 
 cli:
-  build: docker/php
+  build: docker/cli
   volumes_from:
     - data
   working_dir: /app
   tty: true
   stdin_open: true
   command: '/bin/bash'
-  tty: true
   links:
     - db
     - mailcatcher
@@ -63,8 +60,3 @@ mongo:
   image: mongo:latest
   ports:
     - "27017:27017"
-
-#mongo-seed:
-#  build: docker/mongo
-#  links:
-#    - mongo
