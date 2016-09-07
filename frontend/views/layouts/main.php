@@ -10,10 +10,10 @@ $headerTitle = Html::encode($this->title);
 $headerSubtitle = '';
 
 if (isset($this->params["header"]["title"])) {
-    $headerTitle = $headerEncode ? Html::encode($headerTitle) : $headerTitle;
+    $headerTitle = $headerEncode ? Html::encode($this->params["header"]["title"]) : $this->params["header"]["title"];
 }
 if (isset($this->params["header"]["subtitle"])) {
-    $headerTitle = $headerEncode ? Html::encode($headerSubtitle) : $headerSubtitle;
+    $headerSubtitle = $headerEncode ? Html::encode($this->params["header"]["subtitle"]) : $this->params["header"]["subtitle"];
 }
 
 // setup breadcrumbs
