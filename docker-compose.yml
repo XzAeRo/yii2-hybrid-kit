@@ -4,6 +4,11 @@ data:
     - ./:/app
   entrypoint: tail -f /dev/null
 
+#composer:
+#  build: docker/composer
+#  volumes_from:
+#    - data
+
 fpm:
   build: docker/fpm
   volumes_from:
